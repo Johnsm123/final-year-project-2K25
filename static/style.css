@@ -1,0 +1,265 @@
+/* styles.css */
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Updated Background Container */
+#background-container {
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100%;
+}
+
+/* Body Styling */
+
+/* Header Styling */
+/* Title Container (Header Section) */
+.title-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+/* Keyboard Layout for Title */
+.keyboard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Key Style - Reduced font size to 3vw for smaller title */
+.key {
+    font-size: 3vw; /* Reduced size */
+    display: inline-block;
+    letter-spacing: 0.2vw; /* Adjusted letter spacing */
+    transition: transform 0.2s;
+}
+
+/* Key Press Animations */
+@keyframes pressDown1 {
+    30%, 40%, 100% {
+      transform: translateY(0);
+    }
+    35% {
+      transform: translateY(10px);
+    }
+}
+
+/* Applying Animations to Keys */
+.key:nth-child(1) {
+    animation: pressDown1 2s infinite;
+}
+
+/* Links Styling */
+.jux-linx {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 10px;
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+}
+
+/* Button Container */
+.button-container {
+    display: flex; /* Align the buttons in a row */
+    justify-content: space-between; /* Space out the buttons evenly */
+    align-items: center; /* Center align the buttons vertically */
+    margin-top: 50px;
+}
+
+/* General Button Styles */
+.btn {
+    display: flex; /* Use flexbox to stack image and text vertically */
+    flex-direction: column; /* Stack items vertically (image on top, text below) */
+    justify-content: center; /* Center align the content */
+    align-items: center; /* Align image and text in the center */
+    margin: 0 15px; /* Add horizontal spacing between buttons */
+    padding: 0; /* No padding around image */
+    text-align: center; /* Align text center */
+    text-decoration: none;
+    color: white; /* White text color inside buttons */
+    border-radius: 10px; /* Rounded corners for the button container */
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Image Styling */
+.btn .btn-icon {
+    width: 250px; /* Large image size */
+    height: 250px; /* Large image size */
+    object-fit: cover; /* Ensure the image covers the container */
+    border-radius: 10px; /* Rounded corners for the image */
+    margin-bottom: 15px; /* Space between image and text */
+}
+
+/* Hover Effect */
+.btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Team Members Section */
+.team-info {
+    background-color: rgba(0, 0, 0, 0.7); /* Darker background for the section */
+    padding: 30px;
+    margin-top: 40px;
+    border-radius: 10px;
+    text-align: center;
+    color: #ffffff; /* White text */
+}
+
+.team-info h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.team-info span {
+    font-weight: bold;
+}
+
+.team-info ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.team-info li {
+    font-size: 20px;
+    margin: 5px 0;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark footer */
+    border-radius: 5px;
+    font-size: 16px;
+    color: #ffffff; /* White text */
+}
+body {
+    font-family: "Poppins", sans-serif; /* Set Poppins font, fallback to sans-serif */
+    line-height: 1.6;
+    color: #ffffff; /* White text color */
+    background-color: #101013; /* Dark background */
+    background-image: url('/images/Embedded-pic.jpg'); /* Background image */
+    background-size: cover; /* Ensures the image covers the entire viewport */
+    background-position: center center; /* Centers the background image */
+    background-attachment: fixed; /* Fixes the background image when scrolling */
+    display: flex; /* Flexbox for layout */
+    flex-direction: column; /* Align items in a column layout */
+    justify-content: flex-start; /* Align items from the top */
+    align-items: center; /* Center items horizontally */
+    height: 100vh; /* Takes up full height of the viewport */
+    margin: 0; /* Removes default margins */
+    font-weight: 900; /* Set font weight to 900 */
+}
+
+/* Navbar Container */
+.navbar {
+    width: 100%;
+    background-color: #101013; /* Dark background for the navbar */
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Navbar Content */
+.navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Navbar Title Styling */
+.navbar h1 {
+    font-size: 2.5rem; /* Size of the title */
+    color: white; /* White text */
+    text-align: center;
+    margin: 0;
+}
+
+/* Adding text-shadow to the title */
+.text-shadow {
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* Light shadow effect for better visibility */
+}
+
+/* Optional: Adjust text responsiveness on smaller screens */
+@media (max-width: 768px) {
+    .navbar h1 {
+        font-size: 1.8rem; /* Smaller font size for mobile */
+    }
+    
+    /* Adjust Button Container for Smaller Screens */
+    .button-container {
+        flex-direction: column; /* Stack buttons vertically on smaller screens */
+        margin-top: 20px;
+    }
+
+    .btn {
+        width: 80%; /* Make buttons occupy more space */
+        margin: 10px 0; /* Add vertical spacing */
+    }
+
+    .btn .btn-icon {
+        width: 200px; /* Adjust icon size */
+        height: 200px;
+    }
+    
+    /* Adjust Font Size for Title and Team Info */
+    .team-info h3 {
+        font-size: 18px; /* Smaller font size */
+    }
+    
+    .team-info li {
+        font-size: 18px; /* Smaller font size for team list */
+    }
+}
+@media (max-width: 480px) {
+    /* Adjust Button Container for Extra Small Screens */
+    .button-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        width: 90%; /* Make buttons wider */
+        margin: 10px 0;
+    }
+
+    .btn .btn-icon {
+        width: 150px;
+        height: 150px;
+    }
+
+    /* Adjust Font Size for Team Info */
+    .team-info h3 {
+        font-size: 16px;
+    }
+
+    .team-info li {
+        font-size: 16px;
+    }
+
+    /* Reduce text size for better readability */
+    .key {
+        font-size: 4vw; /* Adjusted font size for smaller screens */
+    }
+}
