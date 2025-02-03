@@ -1,0 +1,111 @@
+/* General Body Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0a0a0a;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background: url("../images/background_image.avif") no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Main Container */
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Styling for Sections */
+.box {
+    border: 2px solid #1e1e1e;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    background-color: #1e1e1e;
+}
+
+/* Video Styling */
+.video-container {
+    width: 100%;
+}
+
+.video-container video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Scroll Container */
+.scroll-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 10px 0;
+    justify-content: flex-start;
+    padding-left: 10px;
+    white-space: nowrap;
+    scrollbar-width: thin;
+}
+
+/* Custom Scrollbar Styling */
+.scroll-container::-webkit-scrollbar {
+    height: 8px;
+    background: #1e1e1e;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 10px;
+}
+
+.scroll-item {
+    text-align: center;
+    flex: 0 0 auto;
+    width: 220px;
+}
+
+.scroll-item img {
+    width: 220px;
+    height: 160px;
+    border-radius: 10px;
+    display: block;
+}
+
+/* Technology Container */
+.tech-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.tech-container div {
+    text-align: center;
+}
+
+.tech-container img {
+    width: 48%;
+    height: 300px;
+    border-radius: 10px;
+}
+
+/* Typography */
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #FFD700;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #FFA500;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #FF6347;
+}
